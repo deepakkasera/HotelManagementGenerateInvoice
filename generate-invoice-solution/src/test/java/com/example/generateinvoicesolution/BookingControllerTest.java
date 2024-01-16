@@ -19,7 +19,6 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
 class BookingControllerTest {
     private BookingController bookingController;
     private BookingRepository bookingRepository;
