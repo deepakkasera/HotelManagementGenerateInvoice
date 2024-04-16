@@ -12,20 +12,22 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.reflections.Reflections;
 import org.reflections.scanners.SubTypesScanner;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.lang.reflect.Constructor;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BookingControllerTest {
+@SpringBootTest
+class GenerateInvoiceTests {
     private BookingController bookingController;
     private BookingRepository bookingRepository;
     private CustomerSessionRepository customerSessionRepository;
     private BookingService bookingService;
 
     @BeforeEach
-    private void setupTest() throws Exception {
+    public void setupTest() throws Exception {
         initializeRepositories();
         initializeBookingService();
         initializeBookingController();
